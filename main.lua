@@ -30,6 +30,8 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 323, 0, 273)
 Frame.Size = UDim2.new(0, 318, 0, 124)
+Frame.Draggable = true
+Frame.Active = true
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -79,6 +81,8 @@ StatsViewer.BorderSizePixel = 0
 StatsViewer.Position = UDim2.new(0, 625, 0, 233)
 StatsViewer.Size = UDim2.new(0, 318, 0, 271)
 StatsViewer.Visible = false
+StatsViewer.Active = true
+StatsViewer.Draggable = true
 
 TextLabel_2.Parent = StatsViewer
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -212,7 +216,7 @@ TextButton.MouseButton1Click:Connect(function()
 				local leaderstats = DataFolder:FindFirstChild(plr.Name).leaderstats
 				cash.Text = "Cash: ".. tostring(leaderstats.Cash.Value)
 				lvl.Text = "Level: ".. tostring(leaderstats.Level.Value)
-				exp.Text = "EXP: ".. tostring(leaderstats.EXP.Value)
+				exp.Text = "EXP: ".. tostring(leaderstats.Exp.Value)
 				giant.Text = "Owns Giant: ".. tostring(leaderstats.OwnsGiant.Value)
 				dwarf.Text = "Owns Dwarf: ".. tostring(leaderstats.OwnsMidget.Value)
 			end
